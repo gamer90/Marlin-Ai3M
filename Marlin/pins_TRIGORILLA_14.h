@@ -90,9 +90,9 @@
 
 // Temperatursensoren
 #define TEMP_0_PIN         13
-#define TEMP_1_PIN         15
+#define TEMP_1_PIN         14
 #define TEMP_2_PIN         12
-#define TEMP_BED_PIN       14
+#define TEMP_BED_PIN       15 // default bed sensor pin, burned
 
 // Servos
 #if TRIGORILLA_VERSION == 0 // Default Trigorilla
