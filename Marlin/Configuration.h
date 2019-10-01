@@ -380,9 +380,12 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // i3 Mega stock v5 hotend, 40W heater cartridge (3.6Ω @ 22°C)
-  #define  DEFAULT_Kp 15.94
-  #define  DEFAULT_Ki 1.17
-  #define  DEFAULT_Kd 54.19
+  //#define  DEFAULT_Kp 15.94
+  #define  DEFAULT_Kp 13.56
+  //#define  DEFAULT_Ki 1.17
+  #define  DEFAULT_Ki 0.87
+  //#define  DEFAULT_Kd 54.19
+  #define  DEFAULT_Kd 53.02
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -437,9 +440,12 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Anycubic i3 Mega Ultrabase (0.9Ω @ 22°C)
-  #define DEFAULT_bedKp 251.78
-  #define DEFAULT_bedKi 49.57
-  #define DEFAULT_bedKd 319.73
+  // #define DEFAULT_bedKp 251.78
+  // #define DEFAULT_bedKi 49.57
+  // #define DEFAULT_bedKd 319.73
+  #define DEFAULT_bedKp 154.44
+  #define DEFAULT_bedKi 28.14
+  #define DEFAULT_bedKd 211.91
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -865,7 +871,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false // set to true for stock drivers or TMC2208 with reversed connectors
+#define INVERT_X_DIR true // set to true for stock drivers or TMC2208 with reversed connectors
 #define INVERT_Y_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_Z_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
 
