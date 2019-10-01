@@ -1,6 +1,6 @@
 # Anycubic i3 Mega / Mega-S Marlin 1.1.9 by davidramiro
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3MFT8QMP5ZRCE&source=url) [![Downloads](https://img.shields.io/github/downloads/davidramiro/Marlin-AI3M/total.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/releases) [![Open Issues](https://img.shields.io/github/issues-raw/davidramiro/Marlin-AI3M.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/issues?q=is%3Aopen+is%3Aissue) [![License](https://img.shields.io/github/license/davidramiro/Marlin-AI3M.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/blob/master/LICENSE) [![Latest Release](https://img.shields.io/github/release/davidramiro/Marlin-AI3m.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/releases/latest/) [![Last commit](https://img.shields.io/github/last-commit/davidramiro/Marlin-AI3m.svg?style=flat)](https://github.com/davidramiro/Marlin-Ai3M/commits/)  [![Travis CI](https://api.travis-ci.org/davidramiro/Marlin-Ai3M.svg?branch=master)](https://travis-ci.org/davidramiro/Marlin-Ai3M)  
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6B6SAL5XRH842&source=url) [![Downloads](https://img.shields.io/github/downloads/davidramiro/Marlin-AI3M/total.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/releases) [![Open Issues](https://img.shields.io/github/issues-raw/davidramiro/Marlin-AI3M.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/issues?q=is%3Aopen+is%3Aissue) [![License](https://img.shields.io/github/license/davidramiro/Marlin-AI3M.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/blob/master/LICENSE) [![Latest Release](https://img.shields.io/github/release/davidramiro/Marlin-AI3m.svg?style=flat)](https://github.com/davidramiro/Marlin-AI3M/releases/latest/) [![Last commit](https://img.shields.io/github/last-commit/davidramiro/Marlin-AI3m.svg?style=flat)](https://github.com/davidramiro/Marlin-Ai3M/commits/)  [![Travis CI](https://api.travis-ci.org/davidramiro/Marlin-Ai3M.svg?branch=master)](https://travis-ci.org/davidramiro/Marlin-Ai3M)  
 
 This is a custom version of the [Marlin Firmware](https://github.com/MarlinFirmware/Marlin) for the i3 Mega/Mega-S, gratefully based on [derhopp's repo](https://github.com/derhopp/Marlin-with-Anycubic-i3-Mega-TFT) with his remarkable efforts to get the Anycubic TFT screen to work with the latest versions of Marlin.
 
@@ -70,9 +70,11 @@ I provided three different precompiled hex files: One for no modifications on th
 - `M502` - load hard coded default values
 - `M500` - save them to EEPROM
 
-**If you are using this on a Mega-S, those two additional commands are necessary:**
+**If you are using this on a Mega-S, those four additional commands are necessary:**
 - `M92 E384` - set correct steps for the new extruder
-- `M500` - save them
+- `M203 E30` - limit extruder feedrate
+- `M204 R1500.00` - lower retract acceleration
+- `M500` - save the values
 - I highly recommend calibrating the extruder.
 
 #### Calibration and other instructions have been moved to the [Wiki](https://github.com/davidramiro/Marlin-AI3M/wiki/Calibration).
